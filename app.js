@@ -56,7 +56,7 @@ const app = () => {
     };
 
     //animate player's Circle
-    song.ontimeUpdate = () => {
+    song.ontimeupdate = () => {
         let currentTime = song.currentTime;
         let elapsed = standardDuration - currentTime;
         let seconds = Math.floor(elapsed % 60);
