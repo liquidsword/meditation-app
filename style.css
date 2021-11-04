@@ -11,7 +11,7 @@
     align-items: center;
 }
 
-.time-select, .sound-picker, .player-container {
+.time-select, .sound-picker {
     height: 80%;
     flex: 1;
     display: flex;
@@ -23,6 +23,12 @@
 
 .player-container {
     position: relative;
+    height: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
 }
 
 .player-container svg {
@@ -30,7 +36,7 @@
     height: 50%;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) rotate(-90deg);
     pointer-events: none;
 }
 
