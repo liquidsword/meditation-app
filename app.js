@@ -5,7 +5,6 @@ const app = () => {
     const video = document.querySelector('.vid-container video');
 
     //Sounds
-
     const sounds = document.querySelectorAll('.sound-picker button');
 
     //Time Display
@@ -21,22 +20,23 @@ const app = () => {
         outline.style.strokeDashoffset = outlineLength;
 
     //Play Sound
-        play.addEventListener("click", ()=> {
-            song.play();
+        play.addEventListener("click", () => {
+            checkPlaying(song);
         });
 
     //Function specific to stop and play the sounds
     const checkPlaying = song => {
         if(song.paused){
             song.play();
-            play.src = './svg/pause.svg';
+            video.play();
+            play.src = "./svg/pause.svg";
         } else {
             song.pause();
             video.pause();
             play.src = "./svg/play.svg";
         }
     }
-}
+};
 
 
 app();
